@@ -1,5 +1,4 @@
 #define _CRT_SECURE_NO_WARNINGS
-
 #include <stdio.h>
 
 int main()
@@ -69,33 +68,33 @@ int main()
 	int score;
 	int grade;
 
-	printf(" 점수를 입력하세요(0 ~ 100점까지) >>>  ")
-		scanf ("%d", &score);
+	printf(" 점수를 입력하세요(0 ~ 100점까지) >>>  ");
+	scanf("%d",&score);
 	
 	int n = score / 10;
 	switch (n)
 	{
-	case 10;
-	case 9;
+	case 10:
+	case 9:
 		grade = 'A';
 		break;
 			
-	case 8;
+	case 8:
 		grade = 'B';
 		break;
 
-	case 7;
+	case 7:
 		grade = 'C';
 		break;
-	case 6;
+	case 6:
 		grade = 'D';
 		break;
-	default;
+	default:
 	grade = 'F';
 	}
 	
 	printf("점수는 % d점이고, % c학점입니다", score, grade);
 	
 	return 0;
-	;
+	
 }
