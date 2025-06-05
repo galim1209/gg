@@ -25,7 +25,7 @@ int add_number(int n1, int n2, int n3)
 	return n1 + n2 +n3;	//return 함수를 처리하고 결과를 호출부로 반환하는 명령
 }
 
-// void : 반환값이 없음, 호출한쪽에 겨로가를 반환하지 않는다.
+// void : 반환값이 없음, 호출한쪽에 결과를 반환하지 않는다.
 void display_number(int n)
 {
 	printf(" 매개변수 : %d\n", n);
