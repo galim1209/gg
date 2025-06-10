@@ -11,7 +11,7 @@
 // 함수를 정의하는 방법
 // 함수형(자료형) 함수명( [매개변수 1, 매개변수 2, ...] ) { }
 //
-//매개변수 : Parameters, Arguments, 인수, 인자
+// 매개변수 : Parameters, Arguments, 인수, 인자
 //
 // Define a function (함수의 정의) 
 
