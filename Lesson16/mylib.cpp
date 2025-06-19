@@ -1,24 +1,5 @@
 #include "mylib.h"
 
-/*
-find_value : 순차 탐색 함수
-반환값 : int, 찾은 값의 인덱스, 찾을 값이 배열에 없다면 -1을 반환
-
-매개변수
-int arr[] : 대상 배열
-int count : 배열의 요소들의 갯수
-int to_find : 대상 배열에서 찾을 값
-*/
-int find_value(int arr[], int count, int to_find)
-{
-	for (int i = 0; i < count; i++)
-	{
-		if (arr[i] == to_find)
-			return i;
-	}
-
-	return -1;
-}
 
 void random_value(int arr[], int count)
 {
@@ -31,21 +12,6 @@ void random_value(int arr[], int count)
 	}
 }
 
-// 1 ~ max_value까지만 난수를 생성하여 대입하게 하기 
-void random_value(int arr[], int count, int max_val)
-{
-	if (!arr || !count)
-		return;
-	for (int i = 0; i < count; i++)
-	{
-		int tmp;	//랜덤값을 저장할 임시변수를 선언
-		do {
-			tmp = rand() % max_val + 1;		// 랜덤값을 생성하여 임시 변수에 저장
-		} while (find_value(arr, count, tmp) >= 0);
-
-		arr[i] = tmp;
-	}
-}
 
 // arr = 0x1
 // arr(pointer) + i : 주소의 연산
@@ -84,7 +50,25 @@ void sequence_sort(int arr[], int count)
 	}
 }
 
+/*
+find_value : 순차 탐색 함수
+반환값 : int, 찾은 값의 인덱스, 찾을 값이 배열에 없다면 -1을 반환
 
+매개변수
+int arr[] : 대상 배열
+int count : 배열의 요소들의 갯수
+int to_find : 대상 배열에서 찾을 값
+*/
+int find_value(int arr[], int count, int to_find)
+{
+	for (int i = 0; i < count; i++)
+	{
+		if (arr[i] == to_find)
+			return i;
+	}
+
+	return -1;
+}
 
 // 이진 탐색
 int binary_search(int arr[], int count, int to_find)
@@ -166,13 +150,14 @@ void my_qsor(int arr[], int left, int right)
 
 
 }
-int my_strlen(const char* psz)
+
+int my_strlen(char* psz);
 {
 	int count = 0;
 	int i = 0;
 	while (psz[i])
 	{
-		++count;
+		++ cpunt;
 		++i;
 	}
 
